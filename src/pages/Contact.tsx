@@ -79,24 +79,24 @@ const Contact = () => {
       </section>
 
       {/* Contact Information Cards */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-primary-50">
+      <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-primary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-primary-100"
+                className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-primary-100 dark:border-gray-700"
               >
-                <div className="bg-gradient-to-r from-primary-100 to-secondary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <info.icon className="h-8 w-8 text-primary-600" />
+                <div className="bg-gradient-to-r from-primary-100 to-secondary-100 dark:from-primary-900 dark:to-secondary-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <info.icon className="h-8 w-8 text-primary-600 dark:text-primary-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   {info.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {info.content}
                 </p>
-                <span className="text-primary-600 text-sm font-medium">
+                <span className="text-primary-600 dark:text-primary-400 text-sm font-medium">
                   {info.action}
                 </span>
               </div>
@@ -106,25 +106,25 @@ const Contact = () => {
       </section>
 
       {/* Contact Form & Map */}
-      <section className="py-16 bg-gradient-to-br from-white via-secondary-50 to-primary-50">
+      <section className="py-16 bg-gradient-to-br from-white via-secondary-50 to-primary-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-primary-100">
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-primary-100 dark:border-gray-700">
               <h2 className="text-3xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-6">
                 Send us a Message
               </h2>
-              <p className="text-gray-600 mb-8">
+              <p className="text-gray-600 dark:text-gray-300 mb-8">
                 Have questions about our packages or facilities? Fill out the form below and we'll get back to you within 24 hours.
               </p>
 
               {isSubmitted ? (
-                <div className="bg-gradient-to-r from-success-50 to-success-100 border border-success-200 rounded-2xl p-6 text-center shadow-lg">
-                  <CheckCircle className="h-12 w-12 text-success-600 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-success-800 mb-2">
+                <div className="bg-gradient-to-r from-success-50 to-success-100 dark:from-success-900 dark:to-success-800 border border-success-200 dark:border-success-700 rounded-2xl p-6 text-center shadow-lg">
+                  <CheckCircle className="h-12 w-12 text-success-600 dark:text-success-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-success-800 dark:text-success-200 mb-2">
                     Message Sent Successfully!
                   </h3>
-                  <p className="text-success-600">
+                  <p className="text-success-600 dark:text-success-300">
                     Thank you for contacting us. We'll get back to you soon.
                   </p>
                 </div>
@@ -132,7 +132,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Full Name *
                       </label>
                       <input
@@ -142,12 +142,12 @@ const Contact = () => {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 bg-white/80 backdrop-blur-sm placeholder-gray-500"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm placeholder-gray-500 dark:placeholder-gray-400 dark:text-white"
                         placeholder="Your full name"
                       />
                     </div>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Phone Number *
                       </label>
                       <input
@@ -157,14 +157,14 @@ const Contact = () => {
                         required
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 bg-white/80 backdrop-blur-sm placeholder-gray-500"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm placeholder-gray-500 dark:placeholder-gray-400 dark:text-white"
                         placeholder="Your phone number"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Email Address *
                     </label>
                     <input
@@ -174,13 +174,13 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 bg-white/80 backdrop-blur-sm placeholder-gray-500"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm placeholder-gray-500 dark:placeholder-gray-400 dark:text-white"
                       placeholder="your.email@example.com"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Subject *
                     </label>
                     <select
@@ -189,7 +189,7 @@ const Contact = () => {
                       required
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 bg-white/80 backdrop-blur-sm"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm dark:text-white"
                     >
                       <option value="">Select a subject</option>
                       <option value="pricing">Package Pricing Inquiry</option>

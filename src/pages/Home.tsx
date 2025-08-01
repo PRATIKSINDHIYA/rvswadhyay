@@ -74,13 +74,13 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-br from-white via-primary-50 to-secondary-50">
+      <section className="py-20 bg-gradient-to-br from-white via-primary-50 to-secondary-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-4">
               Why Choose RV स्वाध्याय लाइब्रेरी?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               We provide everything you need for focused, productive study sessions in a comfortable and professional environment.
             </p>
           </div>
@@ -89,15 +89,15 @@ const Home = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl hover:bg-white transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl group border border-primary-100"
+                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-2xl hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl group border border-primary-100 dark:border-gray-700"
               >
-                <div className="bg-gradient-to-r from-primary-100 to-secondary-100 group-hover:from-primary-200 group-hover:to-secondary-200 w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-all duration-300 shadow-lg">
-                  <feature.icon className="h-8 w-8 text-primary-600" />
+                <div className="bg-gradient-to-r from-primary-100 to-secondary-100 group-hover:from-primary-200 group-hover:to-secondary-200 dark:from-primary-900 dark:to-secondary-900 dark:group-hover:from-primary-800 dark:group-hover:to-secondary-800 w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-all duration-300 shadow-lg">
+                  <feature.icon className="h-8 w-8 text-primary-600 dark:text-primary-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300">
                   {feature.description}
                 </p>
               </div>
@@ -131,7 +131,7 @@ const Home = () => {
       </section>
 
       {/* Social Media & Contact Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-primary-50">
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-primary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-8">
             Connect With Us
@@ -139,12 +139,12 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             {/* Social Media */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-primary-100">
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-primary-100 dark:border-gray-700">
               <div className="flex items-center justify-center space-x-3 mb-6">
-                <Instagram className="h-10 w-10 text-primary-600" />
+                <Instagram className="h-10 w-10 text-primary-600 dark:text-primary-400" />
                 <h3 className="text-2xl font-semibold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">Follow Us</h3>
               </div>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Stay updated with our latest photos, student success stories, and library updates
               </p>
               <a 

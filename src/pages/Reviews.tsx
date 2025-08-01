@@ -93,15 +93,15 @@ const Reviews = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-br from-white via-primary-50 to-secondary-50">
+      <section className="py-16 bg-gradient-to-br from-white via-primary-50 to-secondary-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
-              <div key={index} className="group bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-primary-100">
+              <div key={index} className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-primary-100 dark:border-gray-700">
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
                   {stat.value}
                 </div>
-                <div className="text-gray-600 text-sm md:text-base">{stat.label}</div>
+                <div className="text-gray-600 dark:text-gray-300 text-sm md:text-base">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -109,13 +109,13 @@ const Reviews = () => {
       </section>
 
       {/* Reviews Section */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-primary-50">
+      <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-primary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-4">
               What Our Students Say
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 dark:text-gray-300">
               Real feedback from real students who achieved their goals with us
             </p>
           </div>
@@ -124,15 +124,15 @@ const Reviews = () => {
             {reviews.map((review) => (
               <div
                 key={review.id}
-                className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-primary-100"
+                className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-primary-100 dark:border-gray-700"
               >
                 {/* Quote Icon */}
                 <div className="mb-4">
-                  <Quote className="h-8 w-8 text-primary-600" />
+                  <Quote className="h-8 w-8 text-primary-600 dark:text-primary-400" />
                 </div>
 
                 {/* Review Text */}
-                <p className="text-gray-700 mb-6 leading-relaxed">
+                <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                   "{review.review}"
                 </p>
 
@@ -141,12 +141,12 @@ const Reviews = () => {
                   <div className="flex space-x-1 mr-2">
                     {renderStars(review.rating)}
                   </div>
-                  <span className="text-sm text-gray-500">({review.rating}/5)</span>
+                  <span className="text-sm text-gray-500 dark:text-gray-400">({review.rating}/5)</span>
                 </div>
 
                 {/* Student Info */}
                 <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4 bg-gray-200">
+                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4 bg-gray-200 dark:bg-gray-600">
                     <img
                       src={review.image}
                       alt={review.name}
@@ -156,15 +156,15 @@ const Reviews = () => {
                         target.style.display = 'none';
                         const parent = target.parentElement;
                         if (parent) {
-                          parent.innerHTML = `<div class="w-full h-full bg-primary-100 flex items-center justify-center"><svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>`;
+                          parent.innerHTML = `<div class="w-full h-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center"><svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>`;
                         }
                       }}
                     />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">{review.name}</h4>
-                    <p className="text-sm text-primary-600">{review.exam}</p>
-                    <p className="text-xs text-gray-500">{review.date}</p>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">{review.name}</h4>
+                    <p className="text-sm text-primary-600 dark:text-primary-400">{review.exam}</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">{review.date}</p>
                   </div>
                 </div>
               </div>
@@ -174,29 +174,29 @@ const Reviews = () => {
       </section>
 
       {/* Success Stories */}
-      <section className="py-16 bg-gradient-to-br from-white via-secondary-50 to-primary-50">
+      <section className="py-16 bg-gradient-to-br from-white via-secondary-50 to-primary-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-8">
             Success Stories
           </h2>
           
-          <div className="bg-gradient-to-r from-primary-50 to-secondary-50 p-8 rounded-2xl border border-primary-100 shadow-xl">
+          <div className="bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900 dark:to-secondary-900 p-8 rounded-2xl border border-primary-100 dark:border-gray-700 shadow-xl">
             <div className="mb-6">
-              <Quote className="h-12 w-12 text-primary-600 mx-auto mb-4" />
-              <p className="text-xl text-gray-700 leading-relaxed italic">
+              <Quote className="h-12 w-12 text-primary-600 dark:text-primary-400 mx-auto mb-4" />
+              <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed italic">
                 "RV स्वाध्याय लाइब्रेरी provided me with the perfect environment to crack SSC CGL. 
                 The disciplined atmosphere, excellent facilities, and 24/7 availability made all 
                 the difference in my preparation journey. Today, I'm proud to serve as a government officer."
               </p>
             </div>
-            <div className="border-t border-primary-200 pt-6">
+            <div className="border-t border-primary-200 dark:border-gray-600 pt-6">
               <div className="flex items-center justify-center space-x-4">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-primary-200 to-secondary-200 flex items-center justify-center shadow-lg">
-                  <User className="h-8 w-8 text-primary-600" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-primary-200 to-secondary-200 dark:from-primary-800 dark:to-secondary-800 flex items-center justify-center shadow-lg">
+                  <User className="h-8 w-8 text-primary-600 dark:text-primary-400" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-bold text-gray-900">Rajesh Kumar</h4>
-                  <p className="text-primary-600">SSC CGL Officer, 2023 Batch</p>
+                  <h4 className="font-bold text-gray-900 dark:text-white">Rajesh Kumar</h4>
+                  <p className="text-primary-600 dark:text-primary-400">SSC CGL Officer, 2023 Batch</p>
                   <p className="text-sm text-gray-500">RV Library Student (2021-2023)</p>
                 </div>
               </div>
