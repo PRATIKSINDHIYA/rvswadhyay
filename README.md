@@ -7,15 +7,16 @@ A modern, responsive website for RV स्वाध्याय लाइब्�
 ## 🖼️ Website Previews
 
 ### 🏠 Home Page  
-![Home Page](.src/images/Screenshot 2025-08-01 225237.png)
+![Home Page](./src/images/Screenshot%202025-08-01%20225237.png)
 
 ### 🖼️ Gallery Page  
-![Gallery Page](.src/images/Screenshot 2025-08-01 225312.png)
+![Gallery Page](./src/images/Screenshot%202025-08-01%20225312.png)
 
 ### 📞 Contact Us Page  
-![Contact Page](./src/images/Screenshot 2025-08-01 225325.png)
+![Contact Page](./src/images/Screenshot%202025-08-01%20225325.png)
 
 ---
+
 
 ## 🌟 Features
 
